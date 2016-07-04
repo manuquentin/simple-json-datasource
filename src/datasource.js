@@ -78,7 +78,7 @@ export class GenericDatasource {
 
     var targets = _.map(options.targets, target => {
       return {
-        target: this.templateSrv.replace(target.target),
+        target: this.templateSrv.replace(target.target, null, 'regex'),
         refId: target.refId,
         hide: target.hide
       };
